@@ -12,8 +12,6 @@ set :default_stage, "staging"
 # This could be overridden in a stage config file
 set :branch, :master
 
-# set :deploy_to, -> { "/var/www/#{fetch(:application)}" }
-
 # Use :debug for more verbose output when troubleshooting
 set :log_level, :debug
 
