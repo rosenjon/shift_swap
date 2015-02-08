@@ -1,6 +1,6 @@
 set :stage, :production
 set :user, "deploy"
-
+set :deploy_to, -> { "/var/www/#{fetch(:application)}" }
 # Simple Role Syntax
 # ==================
 role :app, %w{deploy@104.131.68.39}

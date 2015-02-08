@@ -1,6 +1,9 @@
 set :application, 'shift_swap'
 set :repo_url, 'git@github.com:rosenjon/bedrock.git'
 
+set :stages, %w(production staging)
+set :default_stage, "staging"
+
 # Branch options
 # Prompts for the branch name (defaults to current branch)
 #ask :branch, -> { `git rev-parse --abbrev-ref HEAD`.chomp }
@@ -9,7 +12,7 @@ set :repo_url, 'git@github.com:rosenjon/bedrock.git'
 # This could be overridden in a stage config file
 set :branch, :master
 
-set :deploy_to, -> { "/var/www/#{fetch(:application)}" }
+# set :deploy_to, -> { "/var/www/#{fetch(:application)}" }
 
 # Use :debug for more verbose output when troubleshooting
 set :log_level, :debug
